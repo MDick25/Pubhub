@@ -3,10 +3,12 @@ package examples.pubhub.dao;
 import java.util.List;
 
 import examples.pubhub.model.Book;
+import examples.pubhub.model.Tag;
 
 public interface TagDAO {
 
-	public List<String> getTagsByBook(Book book);
+	public List<Tag> getTagsByBook(Book book);
+	public List<Tag> getTagsByBook(String isbn);
 	public List<Book> getAllBooksWithTag(String tag);
 	
 	public boolean addTag(String tag,Book book);
